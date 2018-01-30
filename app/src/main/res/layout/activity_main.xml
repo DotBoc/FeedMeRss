@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.feedmerss.lidlproduction.feedmerss.Main">
 
+    <include
+        android:id="@+id/custom_actionbar_with_components"
+        layout="@layout/custom_actionbar_with_components">
+    </include>
+
 </android.support.constraint.ConstraintLayout>
