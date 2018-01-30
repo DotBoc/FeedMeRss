@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "86841829418",
+    "firebase_url": "https://feedmerss-4580c.firebaseio.com",
+    "project_id": "feedmerss-4580c",
+    "storage_bucket": "feedmerss-4580c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86841829418:android:e66590035f15ef27",
+        "android_client_info": {
+          "package_name": "com.feedmerss.lidlproduction.feedmerss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86841829418-t2dum9d5rhu39tosr718su9rt5krl128.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.feedmerss.lidlproduction.feedmerss",
+            "certificate_hash": "b2e06f510b94ce814d71b7bf47f07e21b7a2c589"
+          }
+        },
+        {
+          "client_id": "86841829418-nla42sc0f45h4tuvuvga798ml25b3piu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRKtl9nIS5VxJKSJx8F2I5avbTAMSvapo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86841829418-nla42sc0f45h4tuvuvga798ml25b3piu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
