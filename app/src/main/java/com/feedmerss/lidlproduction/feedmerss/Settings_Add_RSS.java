@@ -18,5 +18,6 @@ public class Settings_Add_RSS extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
+
     }
 }
