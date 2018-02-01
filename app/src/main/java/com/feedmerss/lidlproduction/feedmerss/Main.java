@@ -18,7 +18,7 @@ public class Main extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.custom_actionbar_with_components);
         setSupportActionBar(toolbar);
         Intent intent = getIntent();
-        final String url = intent.getStringExtra("FIREBASE_URL");
+        final String FIREBASE_URL = intent.getStringExtra("FIREBASE_URL");
     }
 
     @Override
@@ -30,6 +30,30 @@ public class Main extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.basic_settings:
+                gotoActivity(Settings_Basic_RSS_selection.class);
+                break;
+
+            case R.id.add_custom_rss:
+                gotoActivity(Settings_Add_RSS.class);
+                break;
+
+            case R.id.manage_custom_rss:
+                gotoActivity(Settings_Manage_Custom_RSS.class);
+                break;
+
+            case R.id.help:
+                gotoActivity(Help.class);
+                break;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void gotoActivity(Class nextClass){
+        Intent intent = new Intent(Main.this ,nextClass);
+        intent.putExtra("FIREBASE_URL", FIREBASE_URL);
+        startActivity(intent);
+
     }
 }

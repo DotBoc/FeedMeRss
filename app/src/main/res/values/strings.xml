@@ -8,4 +8,7 @@
     <string name="loading">Loading</string>
     <string name="auth_failed">Authorization Failed</string>
     <string name="settings">Settings</string>
+    <string name="add_custom_rss">Add Custom RSS Feed</string>
+    <string name="manage_custom_rss">Manage Custom RSS Feed</string>
+    <string name="help">Help</string>
 </resources>

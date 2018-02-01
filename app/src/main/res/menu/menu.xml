@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<item
-    android:id="@+id/menu_item"
-    android:title="@string/settings"
-    app:showAsAction = "never"></item>
+
+    <item
+        android:id="@+id/basic_settings"
+        android:title="@string/settings"
+        app:showAsAction = "never">
+    </item>
+
+    <item
+        android:id="@+id/add_custom_rss"
+        android:title="@string/add_custom_rss"
+        app:showAsAction = "never">
+    </item>
+
+    <item
+        android:id="@+id/manage_custom_rss"
+        android:title="@string/manage_custom_rss"
+        app:showAsAction = "never">
+    </item>
+
+    <item
+        android:id="@+id/help"
+        android:title="@string/help"
+        app:showAsAction = "never">
+    </item>
+
 </menu>

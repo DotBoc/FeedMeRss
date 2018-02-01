@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main"></activity>
+        <activity android:name=".Main" />
+        <activity android:name=".Settings_Basic_RSS_selection" />
+        <activity android:name=".Settings_Add_RSS" />
+        <activity android:name=".Settings_Manage_Custom_RSS" />
+        <activity android:name=".Help"></activity>
     </application>
 
 </manifest>
