@@ -17,10 +17,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main" />
-        <activity android:name=".Settings_Basic_RSS_selection" />
-        <activity android:name=".Settings_Add_RSS" />
-        <activity android:name=".Settings_Manage_Custom_RSS" />
-        <activity android:name=".Help"></activity>
+        <activity android:name=".Settings_Basic_RSS_selection"
+            android:parentActivityName=".Main">
+        </activity>
+        <activity android:name=".Settings_Add_RSS"
+            android:parentActivityName=".Main">
+        </activity>
+        <activity android:name=".Settings_Manage_Custom_RSS"
+            android:parentActivityName=".Main">
+        </activity>
+        <activity android:name=".Help"
+            android:parentActivityName=".Main">
+        </activity>
     </application>
 
 </manifest>

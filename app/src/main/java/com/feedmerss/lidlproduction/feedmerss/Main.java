@@ -52,7 +52,7 @@ public class Main extends AppCompatActivity {
 
     private void gotoActivity(Class nextClass){
         Intent intent = new Intent(Main.this ,nextClass);
-        intent.putExtra("FIREBASE_URL", FIREBASE_URL);
+       // intent.putExtra("FIREBASE_URL", FIREBASE_URL);
         startActivity(intent);
 
     }
