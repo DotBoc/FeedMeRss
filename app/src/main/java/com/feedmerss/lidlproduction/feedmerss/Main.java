@@ -1,14 +1,21 @@
 package com.feedmerss.lidlproduction.feedmerss;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 public class Main extends AppCompatActivity {
+
+    private DrawerLayout mDrawerlayout;
+    private ActionBarDrawerToggle mActionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +24,32 @@ public class Main extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.custom_actionbar_with_components);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        mDrawerlayout=(DrawerLayout) findViewById(R.id.drawer_layout);
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar, R.string.open, R.string.close) {
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+        };
+
+        mDrawerlayout.setDrawerListener(mActionBarDrawerToggle);
+
+        mDrawerlayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mActionBarDrawerToggle.syncState();
+            }
+        });
+
+
         Intent intent = getIntent();
         final String FIREBASE_URL = intent.getStringExtra("FIREBASE_URL");
     }
