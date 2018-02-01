@@ -16,6 +16,7 @@ public class Main extends AppCompatActivity {
 
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private static String FIREBASE_URL = "https://feedmerss-4580c.firebaseio.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,6 @@ public class Main extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        final String FIREBASE_URL = intent.getStringExtra("FIREBASE_URL");
     }
 
     @Override

@@ -29,7 +29,9 @@
                     android:id="@+id/TVEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="sdsd" />
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class NavigationDrawer extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,8 @@ public class NavigationDrawer extends Fragment {
 
         // Set the Text to try this out
         TextView t = (TextView) myInflatedView.findViewById(R.id.TVEmail);
-        t.setText("Text to Display");
+        String email =  FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        t.setText(email);
         return myInflatedView;
     }
 
