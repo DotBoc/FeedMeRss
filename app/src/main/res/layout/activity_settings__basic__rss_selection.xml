@@ -25,14 +25,15 @@
             android:paddingRight="16dp">
 
             <TextView
+                android:id="@+id/TVSelect_"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Basic Rss Feed"
                 android:layout_marginTop="10dp"
+                android:text="Select Basic Rss Feed"
                 android:textAlignment="center" />
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/CBHealth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
