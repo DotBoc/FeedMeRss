@@ -53,6 +53,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
+                loadRSS();
                 Log.e("Msgclosed",RSS_link);
             }
         };
