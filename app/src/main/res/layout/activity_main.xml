@@ -18,6 +18,13 @@
             layout="@layout/custom_actionbar_with_components">
         </include>
 
+        <android.support.v7.widget.RecyclerView
+            android:padding="8dp"
+            android:id="@+id/recyclerView"
+            android:layout_below="@id/custom_actionbar_with_components"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
     </RelativeLayout>
 
     <fragment
