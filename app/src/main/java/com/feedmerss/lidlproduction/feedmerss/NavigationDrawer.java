@@ -5,9 +5,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.feedmerss.lidlproduction.feedmerss.Main;
 
 
 public class NavigationDrawer extends Fragment {
@@ -23,9 +26,19 @@ public class NavigationDrawer extends Fragment {
 
         // Set the Text to try this out
         TextView t = (TextView) myInflatedView.findViewById(R.id.TVEmail);
+        Button BT1 = (Button)  myInflatedView.findViewById(R.id.BT1);
+        BT1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Main.RSS_link="http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml";
+
+            }
+        });
         String email =  FirebaseAuth.getInstance().getCurrentUser().getEmail();
         t.setText(email);
         return myInflatedView;
     }
+
 
 }

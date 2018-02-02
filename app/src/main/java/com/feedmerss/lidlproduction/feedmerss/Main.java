@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.feedmerss.lidlproduction.feedmerss.Adapter.FeedAdapter;
 import com.feedmerss.lidlproduction.feedmerss.Model.RSSObject;
@@ -27,7 +29,7 @@ public class Main extends AppCompatActivity {
     RecyclerView recyclerView;
     private static String FIREBASE_URL = "https://feedmerss-4580c.firebaseio.com/";
     private final String RSS_to_Json_API = "https://api.rss2json.com/v1/api.json?rss_url=";
-    String RSS_link="http://rss.nytimes.com/services/xml/rss/nyt/Science.xml";
+    static String RSS_link="http://rss.nytimes.com/services/xml/rss/nyt/Science.xml";
     RSSObject rssObject;
 
     @Override
@@ -45,11 +47,13 @@ public class Main extends AppCompatActivity {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
+                Log.e("Msgopened",RSS_link);
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
+                Log.e("Msgclosed",RSS_link);
             }
         };
 
@@ -70,6 +74,14 @@ public class Main extends AppCompatActivity {
 
     }
 
+
+    /*@Override
+    public void onClick(View v) {
+        Toast.makeText(Main.this,
+                "Button is clicked!", Toast.LENGTH_LONG).show();
+
+    }
+    */
 
     void loadRSS() {
         AsyncTask<String,String,String> loadRSSAsync = new AsyncTask<String, String, String>() {
@@ -104,6 +116,7 @@ public class Main extends AppCompatActivity {
         url_get_data.append(RSS_link);
         loadRSSAsync.execute(url_get_data.toString());
     }
+
 
 
     @Override
