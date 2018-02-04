@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.feedmerss.lidlproduction.feedmerss.Settings_Add_RSS">
 
     <include
         android:id="@+id/custom_actionbar"
-        layout="@layout/custom_actionbar">
-    </include>
+        layout="@layout/custom_actionbar"></include>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,6 +23,7 @@
             android:paddingRight="16dp">
 
             <TextView
+                android:id="@+id/TVRssFeed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -34,25 +33,29 @@
 
 
             <TextView
+                android:id="@+id/TVRssName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:text="RSS Name" />
 
             <EditText
+                android:id="@+id/ETRssName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:layout_marginTop="10dp"
+                android:ems="10"
                 android:inputType="textPersonName" />
 
             <TextView
+                android:id="@+id/TVRssLink"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:text="RSS Link" />
 
             <EditText
+                android:id="@+id/ETRssLink"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -60,6 +63,7 @@
                 android:inputType="textPersonName" />
 
             <Button
+                android:id="@+id/BSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -69,7 +73,6 @@
 
 
     </ScrollView>
-
 
 
 </LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ΔώσεRSS</string>
+    <string name="logo">"Λογότυπο "</string>
+    <string name="email">Ηλεκτρονική Διεύθυνση</string>
+    <string name="password">Κωδικός</string>
+    <string name="sign_in">Σύνδεση</string>
+    <string name="create_account">Δημιουργία Λογαριασμού</string>
+    <string name="loading">Αναμονή</string>
+    <string name="auth_failed">Αποτυχία εξουσιοδότησης</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="add_custom_rss">Εισαγωγή προσαρμοσμένης RSS ροής</string>
+    <string name="manage_custom_rss">Διαχείριση προσαρμοσμένης RSS ροής</string>
+    <string name="help">Βοήθεια</string>
+</resources>

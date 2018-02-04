@@ -25,6 +25,7 @@
             android:paddingRight="16dp">
 
             <TextView
+                android:id="@+id/TVBasicRss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Select Basic Rss Feed"
@@ -32,76 +33,77 @@
                 android:textAlignment="center" />
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/CBHealth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Health" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/CBSports"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Sports" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/CBFilms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="CBFilms" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/CBFinance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Finance" />
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/CBPolitics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Politics" />
 
             <CheckBox
-                android:id="@+id/checkBox6"
+                android:id="@+id/CBWeather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Weather" />
 
             <CheckBox
-                android:id="@+id/checkBox7"
+                android:id="@+id/CBLifestyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Lifestyle" />
 
             <CheckBox
-                android:id="@+id/checkBox8"
+                android:id="@+id/CBTheatre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Theatre" />
 
             <CheckBox
-                android:id="@+id/checkBox9"
+                android:id="@+id/CBTravel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Travel" />
 
             <CheckBox
-                android:id="@+id/checkBox10"
+                android:id="@+id/CBAnimals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CheckBox" />
+                android:text="Animals" />
 
             <Button
+                android:id="@+id/BSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

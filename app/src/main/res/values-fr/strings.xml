@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Donnez-moiRSS</string>
+    <string name="logo">Logo</string>
+    <string name="email">E-mail</string>
+    <string name="password">Mot de Passe</string>
+    <string name="sign_in">Connecter</string>
+    <string name="create_account">Crée un compte</string>
+    <string name="loading">Chargement</string>
+    <string name="auth_failed">Echec d\'autorisation</string>
+    <string name="settings">Paramètres</string>
+    <string name="add_custom_rss">Ajouter un RSS flux personnalisé</string>
+    <string name="manage_custom_rss">Gérer un RSS flux personnalisé</string>
+    <string name="help">Aide</string>
+</resources>
