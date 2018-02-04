@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity implements
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+        // Check if user is signed in (non-null) .
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
@@ -176,7 +176,6 @@ public class Login extends AppCompatActivity implements
 
     private void gotoActivity(Class nextClass){
         Intent intent = new Intent(Login.this ,nextClass);
-        intent.putExtra("FIREBASE_URL", FIREBASE_URL);
         startActivity(intent);
 
     }

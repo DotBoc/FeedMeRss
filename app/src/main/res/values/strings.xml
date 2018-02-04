@@ -11,4 +11,8 @@
     <string name="add_custom_rss">Add Custom RSS Feed</string>
     <string name="manage_custom_rss">Manage Custom RSS Feed</string>
     <string name="help">Help</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="health">Health</string>
+    <string name="example">Example</string>
 </resources>

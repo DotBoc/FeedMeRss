@@ -29,5 +29,8 @@ public class Settings_Add_RSS extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+
+
     }
 }

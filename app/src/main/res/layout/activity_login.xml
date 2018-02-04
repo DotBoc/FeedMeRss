@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,89 +7,88 @@
 
     <include
         android:id="@+id/custom_actionbar"
-        layout="@layout/custom_actionbar">
-    </include>
+        layout="@layout/custom_actionbar"></include>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context="com.feedmerss.lidlproduction.feedmerss.Login">
+        android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/IVLogo"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
-            android:contentDescription="@string/logo"
-            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+            tools:context="com.feedmerss.lidlproduction.feedmerss.Login">
 
-        <TextView
-            android:id="@+id/TVEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/IVLogo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
-            android:text="@string/email" />
 
-        <EditText
-            android:id="@+id/ETEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/TVEmail"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress" />
+            <ImageView
+                android:id="@+id/IVLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:contentDescription="@string/logo"
+                app:srcCompat="@drawable/feedmerss" />
 
-        <TextView
-            android:id="@+id/TVPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ETEmail"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:text="@string/password" />
+            <TextView
+                android:id="@+id/TVEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IVLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:text="@string/email" />
 
-        <EditText
-            android:id="@+id/ETPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/TVPassword"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/ETEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TVEmail"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
 
-        <Button
-            android:id="@+id/BTSign_in"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/ETPassword"
-            android:layout_marginTop="80dp"
-            android:layout_toStartOf="@+id/TVEmail"
-            android:text="@string/sign_in" />
+            <TextView
+                android:id="@+id/TVPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ETEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="@string/password" />
 
-        <Button
-            android:id="@+id/BTCreate_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/ETPassword"
-            android:layout_marginTop="80dp"
-            android:layout_toEndOf="@+id/TVEmail"
-            android:text="@string/create_account" />
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/ETPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TVPassword"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
 
-</ScrollView>
+            <Button
+                android:id="@+id/BTSign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ETPassword"
+                android:layout_marginTop="80dp"
+                android:layout_toStartOf="@+id/TVEmail"
+                android:text="@string/sign_in" />
+
+            <Button
+                android:id="@+id/BTCreate_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/ETPassword"
+                android:layout_marginTop="80dp"
+                android:layout_toEndOf="@+id/TVEmail"
+                android:text="@string/create_account" />
+        </RelativeLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
