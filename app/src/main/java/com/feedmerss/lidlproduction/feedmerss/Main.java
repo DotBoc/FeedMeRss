@@ -153,6 +153,6 @@ public class Main extends AppCompatActivity {
         Intent intent = new Intent(Main.this ,nextClass);
        // intent.putExtra("FIREBASE_URL", FIREBASE_URL);
         startActivity(intent);
-
+//12342423423
     }
 }
