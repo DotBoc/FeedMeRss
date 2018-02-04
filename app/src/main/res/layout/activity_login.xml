@@ -7,11 +7,14 @@
 
     <include
         android:id="@+id/custom_actionbar"
-        layout="@layout/custom_actionbar"></include>
+        layout="@layout/custom_actionbar"
+        android:visibility="visible"></include>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <RelativeLayout
@@ -26,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="23dp"
                 android:contentDescription="@string/logo"
                 app:srcCompat="@drawable/feedmerss" />
 

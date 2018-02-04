@@ -37,11 +37,11 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.custom_actionbar_with_components);
+        Toolbar toolbar = findViewById(R.id.custom_actionbar_with_components);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        mDrawerlayout=(DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerlayout= findViewById(R.id.drawer_layout);
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar, R.string.open, R.string.close) {
 
             @Override
@@ -67,7 +67,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -75,14 +75,6 @@ public class Main extends AppCompatActivity {
 
     }
 
-
-    /*@Override
-    public void onClick(View v) {
-        Toast.makeText(Main.this,
-                "Button is clicked!", Toast.LENGTH_LONG).show();
-
-    }
-    */
 
     void loadRSS() {
         AsyncTask<String,String,String> loadRSSAsync = new AsyncTask<String, String, String>() {
@@ -153,6 +145,6 @@ public class Main extends AppCompatActivity {
         Intent intent = new Intent(Main.this ,nextClass);
        // intent.putExtra("FIREBASE_URL", FIREBASE_URL);
         startActivity(intent);
-//12342423423gjhgjy
+
     }
 }
