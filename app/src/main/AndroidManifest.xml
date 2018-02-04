@@ -31,7 +31,9 @@
         <activity
             android:name=".Help"
             android:parentActivityName=".Main"></activity>
-        <activity android:name=".UploadActivity"></activity>
+        <activity
+            android:name=".UploadActivity"
+            android:parentActivityName=".Main"></activity>
     </application>
 
 </manifest>

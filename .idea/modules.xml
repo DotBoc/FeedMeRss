@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FeedMeRss.iml" filepath="$PROJECT_DIR$/FeedMeRss.iml" />
+      <module fileurl="file://E:\Users\george\Desktop\New folder\FeedMeRss\FeedMeRss.iml" filepath="E:\Users\george\Desktop\New folder\FeedMeRss\FeedMeRss.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Users\george\Desktop\New folder\FeedMeRss\app\app.iml" filepath="E:\Users\george\Desktop\New folder\FeedMeRss\app\app.iml" />
     </modules>
   </component>
 </project>

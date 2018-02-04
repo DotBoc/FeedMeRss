@@ -134,6 +134,10 @@ public class Main extends AppCompatActivity {
                 gotoActivity(Settings_Manage_Custom_RSS.class);
                 break;
 
+            case R.id.upload:
+                gotoActivity(UploadActivity.class);
+                break;
+
             case R.id.help:
                 gotoActivity(Help.class);
                 break;
