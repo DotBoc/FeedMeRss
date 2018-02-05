@@ -28,7 +28,7 @@
                 android:id="@+id/TVBasicRss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Basic Rss Feed"
+                android:text="@+string/Select Basic Rss Feed"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center" />
 
@@ -37,77 +37,77 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Health" />
+                android:text="@+string/Health" />
 
             <CheckBox
                 android:id="@+id/CBSports"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Sports" />
+                android:text="@+string/Sports" />
 
             <CheckBox
                 android:id="@+id/CBFilms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CBFilms" />
+                android:text="@+string/CBFilms" />
 
             <CheckBox
                 android:id="@+id/CBFinance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Finance" />
+                android:text="@+string/Finance" />
 
             <CheckBox
                 android:id="@+id/CBPolitics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Politics" />
+                android:text="@+string/Politics" />
 
             <CheckBox
                 android:id="@+id/CBWeather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Weather" />
+                android:text="@+string/Weather" />
 
             <CheckBox
                 android:id="@+id/CBLifestyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Lifestyle" />
+                android:text="@+string/Lifestyle" />
 
             <CheckBox
                 android:id="@+id/CBTheatre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Theatre" />
+                android:text="@+string/Theatre" />
 
             <CheckBox
                 android:id="@+id/CBTravel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Travel" />
+                android:text="@+string/Travel" />
 
             <CheckBox
                 android:id="@+id/CBAnimals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Animals" />
+                android:text="@+string/Animals" />
 
             <Button
                 android:id="@+id/BSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Save" />
+                android:text="@+string/Save" />
 
         </LinearLayout>
 
