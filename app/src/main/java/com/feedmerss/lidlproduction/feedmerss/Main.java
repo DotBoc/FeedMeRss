@@ -29,7 +29,7 @@ public class Main extends AppCompatActivity {
     RecyclerView recyclerView;
     private static String FIREBASE_URL = "https://feedmerss-4580c.firebaseio.com/";
     private final String RSS_to_Json_API = "https://api.rss2json.com/v1/api.json?rss_url=";
-    static String RSS_link="http://rss.nytimes.com/services/xml/rss/nyt/Science.xml";
+    static String RSS_link="https://www.huffingtonpost.com/topic/animals/feed";
     RSSObject rssObject;
 
     @Override
