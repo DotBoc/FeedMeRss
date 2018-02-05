@@ -19,15 +19,13 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Settings_Add_RSS extends AppCompatActivity {
 
 
-    private FirebaseDatabase mFirebaseDatabase;
-    private DatabaseReference mDatabaseReference;
-    private FirebaseAuth mAuth;
+
 
     private TextView AddFeed;
     private Button Save;
     private EditText RssName;
     private EditText RssLink;
-    private String uid;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,29 +42,11 @@ public class Settings_Add_RSS extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("/users");
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        uid = user.getUid();
 
 
-       Save.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               AddRSS();
-           }
-       });
     }
 
-    private void AddRSS() {
-        //mDatabaseReference.child(uid).setValue("Hello, World!");
-        mDatabaseReference.child(uid).setValue("123213123");
-        Log.e("kurwa","Etrekse");
 
-        Log.e("kurwa","");
-
-        //displaying a success toast
-        Toast.makeText(this, "Artist added", Toast.LENGTH_LONG).show();
-    }
 
 
 }

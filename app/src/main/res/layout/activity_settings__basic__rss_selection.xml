@@ -37,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Health" />
 
             <CheckBox
@@ -44,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Sports" />
 
             <CheckBox
@@ -51,13 +53,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="CBFilms" />
+                android:onClick="onCheckboxClicked"
+                android:text="Films" />
 
             <CheckBox
                 android:id="@+id/CBFinance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Finance" />
 
             <CheckBox
@@ -65,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Politics" />
 
             <CheckBox
@@ -72,6 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Weather" />
 
             <CheckBox
@@ -79,6 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Lifestyle" />
 
             <CheckBox
@@ -86,6 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Theatre" />
 
             <CheckBox
@@ -93,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Travel" />
 
             <CheckBox
@@ -100,6 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="Animals" />
 
             <Button

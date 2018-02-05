@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,6 +20,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Settings_Basic_RSS_selection extends AppCompatActivity {
+
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mDatabaseReference;
+    private FirebaseAuth mAuth;
+    private String uid;
 
     private TextView BasicRss;
     private CheckBox Health,Sports,Films,Finance,Politics,Weather,Lifestyle,Theatre,Travel,Animals;
@@ -38,58 +44,149 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("/users");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        final String uid = user.getUid();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        final String urlDB = mDatabase.getDatabase().toString();
+        uid = user.getUid();
 
         BasicRss = findViewById(R.id.TVBasicRss);
+
+
         Health = findViewById(R.id.CBHealth);
-        Health.setChecked(getFromDB("Health"));
         Sports = findViewById(R.id.CBSports);
-        Sports.setChecked(getFromDB("Sports"));
         Films = findViewById(R.id.CBFilms);
-        Films.setChecked(getFromDB("Films"));
         Finance = findViewById(R.id.CBFinance);
-        Finance.setChecked(getFromDB("Finance"));
         Politics = findViewById(R.id.CBPolitics);
-        Politics.setChecked(getFromDB("Politics"));
         Weather = findViewById(R.id.CBWeather);
-        Weather.setChecked(getFromDB("Weather"));
         Lifestyle = findViewById(R.id.CBLifestyle);
-        Lifestyle.setChecked(getFromDB("Lifestyle"));
         Theatre = findViewById(R.id.CBTheatre);
-        Theatre.setChecked(getFromDB("Theatre"));
         Travel = findViewById(R.id.CBTravel);
-        Theatre.setChecked(getFromDB("Travel"));
         Animals = findViewById(R.id.CBAnimals);
-        Animals.setChecked(getFromDB("Animals"));
         Save = findViewById(R.id.BSave);
         Save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                mDatabase.child("CustomRSS").setValue("1");
-                Log.e("urlDB",urlDB);
-                Log.e("uid",uid);
-                Log.e("koumpi","egine");
+                onCheckboxClicked(v);
+
 
             }
         });
 
     }
 
-    private boolean getFromDB(String key){
-        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        return sharedpreferences.getBoolean(key, false);
+
+    public void onCheckboxClicked(View view) {
+
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.CBHealth:
+                if (checked){
+                    AddRSS("Health","https://www.huffingtonpost.com/section/health/feed");
+                }
+                else{
+                    RemoveRSS("Health");
+                }
+
+                break;
+
+            case R.id.CBSports:
+                if (checked){
+                    AddRSS("Sports","https://www.huffingtonpost.com/section/sports/feed");
+                }
+                else{
+                    RemoveRSS("Sports");
+                }
+                break;
+
+            case R.id.CBFilms:
+                if (checked){
+                    AddRSS("Films","https://www.huffingtonpost.com/topic/film/feed");
+                }
+                else{
+                    RemoveRSS("Films");
+                }
+                break;
+
+
+            case R.id.CBFinance:
+                if (checked){
+                    AddRSS("Finance","https://www.huffingtonpost.com/section/money/feed");
+                }
+                else{
+                    RemoveRSS("Finance");
+                }
+                break;
+
+
+            case R.id.CBPolitics:
+                if (checked){
+                    AddRSS("Politics","https://www.huffingtonpost.com/section/politics/feed");
+                }
+                else{
+                    RemoveRSS("Politics");
+                }
+                break;
+
+
+            case R.id.CBWeather:
+                if (checked){
+                    AddRSS("Weather","https://www.huffingtonpost.com/section/health/feed");
+                }
+                else{
+                    RemoveRSS("Weather");
+                }
+                break;
+
+
+            case R.id.CBLifestyle:
+                if (checked){
+                    AddRSS("Lifestyle","https://www.huffingtonpost.com/section/celebrity/feed");
+                }
+                else{
+                    RemoveRSS("Lifestyle");
+                }
+                break;
+
+
+            case R.id.CBTheatre:
+                if (checked){
+                    AddRSS("Theater","https://www.huffingtonpost.com/topic/theatre/feed");
+                }
+                else{
+                    RemoveRSS("Theater");
+                }
+                break;
+
+
+            case R.id.CBTravel:
+                if (checked){
+                    AddRSS("Travel"," https://www.huffingtonpost.com/section/travel/feed");
+                }
+                else{
+                    RemoveRSS("Travel");
+                }
+                break;
+
+
+            case R.id.CBAnimals:
+                if (checked){
+                    AddRSS("Animals","https://www.huffingtonpost.com/topic/animals/feed");
+                }
+                else{
+                    RemoveRSS("Animals");
+                }
+                break;
+        }
     }
 
-    private void saveInDB(String key,boolean value){
-        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putBoolean(key, value);
-        editor.commit();
+    private void AddRSS(String id , String link) {
+        mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).setValue(link);
+        Log.e(id,link);
     }
 
+    private void RemoveRSS(String id){
+        mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).removeValue();
 
+    }
 
 }
