@@ -29,4 +29,6 @@
     <string name="Animals">Animals</string>
     <string name="Save">Save</string>
     <string name="Select_Basic_Rss_Feed">Select Basic Rss Feed</string>
+    <string name="accept">Accept</string>
+    <string name="added_rss_link">Successfully added RSS link with name : </string>
 </resources>

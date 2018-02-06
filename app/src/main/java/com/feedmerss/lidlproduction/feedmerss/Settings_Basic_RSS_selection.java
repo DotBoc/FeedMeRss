@@ -1,6 +1,7 @@
 package com.feedmerss.lidlproduction.feedmerss;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
@@ -24,16 +25,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
-    private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
-    private DataSnapshot mDataSnapshot;
-    private FirebaseAuth mAuth;
     private String uid;
 
 
     private TextView BasicRss;
     private CheckBox Health,Sports,Films,Finance,Politics,Weather,Lifestyle,Theatre,Travel,Animals;
-    private Button Save;
+    private Button Accept;
 
 
 
@@ -85,12 +83,11 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
         Animals = findViewById(R.id.CBAnimals);
         CheckState(Animals,"Animals");
 
-        Save = findViewById(R.id.BSave);
-        Save.setOnClickListener(new View.OnClickListener() {
+        Accept = findViewById(R.id.BTAccept);
+        Accept.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                onCheckboxClicked(v);
-
+                gotoActivity(Main.class);
 
             }
         });
@@ -205,13 +202,10 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
     private void AddRSS(String id , String link) {
         mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).setValue(link);
-        Log.e(id,link);
     }
 
     private void RemoveRSS(String id){
         mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).removeValue();
-        Log.e(id,"vgike");
-
     }
 
     private void CheckState(final CheckBox checkBox ,String id){
@@ -221,11 +215,9 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     checkBox.setChecked(true);
-                    Log.e("snap","true");
                 }
                 else {
                     checkBox.setChecked(false);
-                    Log.e("snap","false");
                 }
             }
 
@@ -235,5 +227,11 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
                 Toast.makeText(Settings_Basic_RSS_selection.this , R.string.error , Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    private void gotoActivity(Class nextClass){
+        Intent intent = new Intent(Settings_Basic_RSS_selection.this ,nextClass);
+        startActivity(intent);
+
     }
 }

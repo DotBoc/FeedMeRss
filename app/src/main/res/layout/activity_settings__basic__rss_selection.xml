@@ -114,11 +114,11 @@
                 android:text="@string/Animals" />
 
             <Button
-                android:id="@+id/BSave"
+                android:id="@+id/BTAccept"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/Save" />
+                android:text="@string/accept" />
 
         </LinearLayout>
 
