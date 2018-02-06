@@ -35,7 +35,7 @@ import com.squareup.picasso.Picasso;
 public class UploadActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
-
+//terstytst
     private Button mButtonChooseImage;
     private Button mButtonUpload;
     private TextView mTextViewShowUploads;
