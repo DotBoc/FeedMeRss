@@ -29,7 +29,7 @@ public class Main extends AppCompatActivity {
     RecyclerView recyclerView;
     private static String FIREBASE_URL = "https://feedmerss-4580c.firebaseio.com/";
     private final String RSS_to_Json_API = "https://api.rss2json.com/v1/api.json?rss_url=";
-    static String RSS_link="http://rss.nytimes.com/services/xml/rss/nyt/Science.xml";
+    static String RSS_link="https://www.huffingtonpost.com/topic/animals/feed";
     RSSObject rssObject;
 
     @Override
@@ -37,11 +37,11 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.custom_actionbar_with_components);
+        Toolbar toolbar = findViewById(R.id.custom_actionbar_with_components);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        mDrawerlayout=(DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerlayout= findViewById(R.id.drawer_layout);
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar, R.string.open, R.string.close) {
 
             @Override
@@ -67,7 +67,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -75,14 +75,6 @@ public class Main extends AppCompatActivity {
 
     }
 
-
-    /*@Override
-    public void onClick(View v) {
-        Toast.makeText(Main.this,
-                "Button is clicked!", Toast.LENGTH_LONG).show();
-
-    }
-    */
 
     void loadRSS() {
         AsyncTask<String,String,String> loadRSSAsync = new AsyncTask<String, String, String>() {
@@ -142,6 +134,10 @@ public class Main extends AppCompatActivity {
                 gotoActivity(Settings_Manage_Custom_RSS.class);
                 break;
 
+            case R.id.upload:
+                gotoActivity(UploadActivity.class);
+                break;
+
             case R.id.help:
                 gotoActivity(Help.class);
                 break;
@@ -153,6 +149,6 @@ public class Main extends AppCompatActivity {
         Intent intent = new Intent(Main.this ,nextClass);
        // intent.putExtra("FIREBASE_URL", FIREBASE_URL);
         startActivity(intent);
-//12342423423gjhgjy
+
     }
 }

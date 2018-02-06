@@ -21,6 +21,12 @@
     </item>
 
     <item
+        android:id="@+id/upload"
+        android:title="@string/upload"
+        app:showAsAction = "never">
+    </item>
+
+    <item
         android:id="@+id/help"
         android:title="@string/help"
         app:showAsAction = "never">

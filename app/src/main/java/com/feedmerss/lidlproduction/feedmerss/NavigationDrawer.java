@@ -26,7 +26,7 @@ public class NavigationDrawer extends Fragment {
 
         // Set the Text to try this out
         TextView t = (TextView) myInflatedView.findViewById(R.id.TVEmail);
-        Button BT1 = (Button)  myInflatedView.findViewById(R.id.BT1);
+       /* Button BT1 = (Button)  myInflatedView.findViewById(R.id.BT1);
         BT1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +34,7 @@ public class NavigationDrawer extends Fragment {
                 Main.RSS_link="http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml";
 
             }
-        });
+        });*/
         String email =  FirebaseAuth.getInstance().getCurrentUser().getEmail();
         t.setText(email);
         return myInflatedView;

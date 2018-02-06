@@ -9,7 +9,8 @@
 
     <include
         android:id="@+id/custom_actionbar"
-        layout="@layout/custom_actionbar"></include>
+        layout="@layout/custom_actionbar">
+    </include>
 
     <ScrollView
         android:layout_width="match_parent"

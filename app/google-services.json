@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "86841829418-akha6igq74a1loqo5thr8fr648c90n9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.feedmerss.lidlproduction.feedmerss",
+            "certificate_hash": "0f3cfc02d051101f7b2027da9b427033df17da30"
+          }
+        },
+        {
           "client_id": "86841829418-t2dum9d5rhu39tosr718su9rt5krl128.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
