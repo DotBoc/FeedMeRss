@@ -23,7 +23,9 @@
     <string name="Politics">Politics</string>
     <string name="Weather">Weather</string>
     <string name="Lifestyle">Lifestyle</string>
-    <string name="Theater">Theater</string>
+    <string name="Theatre">Theatre</string>
     <string name="Travel">Travel</string>
     <string name="Animals">Animals</string>
+    <string name="Save">Save</string>
+    <string name="Select_Basic_Rss_Feed">Select Basic Rss Feed</string>
 </resources>
