@@ -28,8 +28,9 @@
                 android:id="@+id/TVBasicRss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@+string/Select Basic Rss Feed"
+                android:text="@+string/Select_Basic_Rss_Feed"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:textAlignment="center" />
 
             <CheckBox
@@ -37,20 +38,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Health" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Health" />
 
             <CheckBox
                 android:id="@+id/CBSports"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Sports" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Sports" />
 
             <CheckBox
                 android:id="@+id/CBFilms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="@+string/CBFilms" />
 
             <CheckBox
@@ -58,13 +62,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Finance" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Finance" />
 
             <CheckBox
                 android:id="@+id/CBPolitics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="@+string/Politics" />
 
             <CheckBox
@@ -72,20 +78,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Weather" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Weather" />
 
             <CheckBox
                 android:id="@+id/CBLifestyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Lifestyle" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Lifestyle" />
 
             <CheckBox
                 android:id="@+id/CBTheatre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:onClick="onCheckboxClicked"
                 android:text="@+string/Theatre" />
 
             <CheckBox
@@ -93,21 +102,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Travel" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Travel" />
 
             <CheckBox
                 android:id="@+id/CBAnimals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@+string/Animals" />
+                android:onClick="onCheckboxClicked"
+                android:text="@string/Animals" />
 
             <Button
                 android:id="@+id/BSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="+string/@Save" />
+                android:text="@+string/Save" />
 
 
         </LinearLayout>

@@ -29,7 +29,7 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
     private DataSnapshot mDataSnapshot;
     private FirebaseAuth mAuth;
     private String uid;
-    Boolean check;
+
 
     private TextView BasicRss;
     private CheckBox Health,Sports,Films,Finance,Politics,Weather,Lifestyle,Theatre,Travel,Animals;
@@ -37,8 +37,6 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
 
 
-
-    public static final String MyPREFERENCES = "MyPrefs" ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,24 +56,34 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
 
         Health = findViewById(R.id.CBHealth);
-        Health.setChecked(CheckState("Health"));
+        CheckState(Health,"Health");
+
         Sports = findViewById(R.id.CBSports);
+        CheckState(Sports,"Sports");
 
         Films = findViewById(R.id.CBFilms);
+        CheckState(Films,"Films");
 
         Finance = findViewById(R.id.CBFinance);
+        CheckState(Finance,"Finance");
 
         Politics = findViewById(R.id.CBPolitics);
+        CheckState(Politics,"Politics");
 
         Weather = findViewById(R.id.CBWeather);
+        CheckState(Weather,"Weather");
 
         Lifestyle = findViewById(R.id.CBLifestyle);
+        CheckState(Lifestyle,"Lifestyle");
 
         Theatre = findViewById(R.id.CBTheatre);
+        CheckState(Theatre,"Theatre");
 
         Travel = findViewById(R.id.CBTravel);
+        CheckState(Travel,"Travel");
 
         Animals = findViewById(R.id.CBAnimals);
+        CheckState(Animals,"Animals");
 
         Save = findViewById(R.id.BSave);
         Save.setOnClickListener(new View.OnClickListener() {
@@ -202,30 +210,30 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
     private void RemoveRSS(String id){
         mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).removeValue();
+        Log.e(id,"vgike");
 
     }
 
-    private boolean CheckState(String id){
+    private void CheckState(final CheckBox checkBox ,String id){
+
         mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
-                    check = true;
+                    checkBox.setChecked(true);
                     Log.e("snap","true");
                 }
                 else {
-                    check = false;
+                    checkBox.setChecked(false);
                     Log.e("snap","false");
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                check = false;
+                checkBox.setChecked(false);
                 Toast.makeText(Settings_Basic_RSS_selection.this , R.string.error , Toast.LENGTH_LONG).show();
             }
-            return ValueEventListener;
         });
-        return check;
     }
 }
