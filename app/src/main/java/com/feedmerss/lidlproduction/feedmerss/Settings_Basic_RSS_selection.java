@@ -25,10 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
-    private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
-    private DataSnapshot mDataSnapshot;
-    private FirebaseAuth mAuth;
     private String uid;
 
 
