@@ -12,4 +12,14 @@
     <string name="add_custom_rss">Εισαγωγή προσαρμοσμένης RSS ροής</string>
     <string name="manage_custom_rss">Διαχείριση προσαρμοσμένης RSS ροής</string>
     <string name="help">Βοήθεια</string>
+    <string name="Health">Υγεία</string>
+    <string name="Sports">Αθλητικά</string>
+    <string name="Films">Ταινίες</string>
+    <string name="Finance">Οικονομία</string>
+    <string name="Politics">Πολιτικά</string>
+    <string name="Weather">Καιρός</string>
+    <string name="Lifestyle">Lifestyle</string>
+    <string name="Theater">Θέατρο</string>
+    <string name="Travel">Ταξίδια</string>
+    <string name="Animals">Ζώα</string>
 </resources>

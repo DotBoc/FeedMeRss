@@ -12,4 +12,14 @@
     <string name="add_custom_rss">Ajouter un RSS flux personnalisé</string>
     <string name="manage_custom_rss">Gérer un RSS flux personnalisé</string>
     <string name="help">Aide</string>
+    <string name="Health">Santé</string>
+    <string name="Sports">Sports</string>
+    <string name="Films">Films</string>
+    <string name="Finance">Economie</string>
+    <string name="Politics">Politique</string>
+    <string name="Weather">Météo</string>
+    <string name="Lifestyle">Lifestyle</string>
+    <string name="Theater">Théâtre</string>
+    <string name="Travel">Voyager</string>
+    <string name="Animals">Animaux</string>
 </resources>
