@@ -16,20 +16,26 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
+    private DataSnapshot mDataSnapshot;
     private FirebaseAuth mAuth;
     private String uid;
+    Boolean check;
 
     private TextView BasicRss;
     private CheckBox Health,Sports,Films,Finance,Politics,Weather,Lifestyle,Theatre,Travel,Animals;
     private Button Save;
-    private DatabaseReference mDatabase;
+
+
 
 
     public static final String MyPREFERENCES = "MyPrefs" ;
@@ -52,15 +58,25 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
 
         Health = findViewById(R.id.CBHealth);
+        Health.setChecked(CheckState("Health"));
         Sports = findViewById(R.id.CBSports);
+
         Films = findViewById(R.id.CBFilms);
+
         Finance = findViewById(R.id.CBFinance);
+
         Politics = findViewById(R.id.CBPolitics);
+
         Weather = findViewById(R.id.CBWeather);
+
         Lifestyle = findViewById(R.id.CBLifestyle);
+
         Theatre = findViewById(R.id.CBTheatre);
+
         Travel = findViewById(R.id.CBTravel);
+
         Animals = findViewById(R.id.CBAnimals);
+
         Save = findViewById(R.id.BSave);
         Save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -189,4 +205,27 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
     }
 
+    private boolean CheckState(String id){
+        mDatabaseReference.child(uid).child("BasicRSSFeeds").child(id).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    check = true;
+                    Log.e("snap","true");
+                }
+                else {
+                    check = false;
+                    Log.e("snap","false");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                check = false;
+                Toast.makeText(Settings_Basic_RSS_selection.this , R.string.error , Toast.LENGTH_LONG).show();
+            }
+            return ValueEventListener;
+        });
+        return check;
+    }
 }
