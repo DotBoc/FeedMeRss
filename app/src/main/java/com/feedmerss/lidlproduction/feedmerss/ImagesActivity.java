@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import com.feedmerss.lidlproduction.feedmerss.Model.ImageAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +32,8 @@ public class ImagesActivity extends AppCompatActivity implements ImageAdapter.On
     private FirebaseStorage mStorage;
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBListener;
+
+    private String uid;
 
     private List<Upload> mUploads;
 
@@ -52,8 +56,11 @@ public class ImagesActivity extends AppCompatActivity implements ImageAdapter.On
 
         mAdapter.setOnItemClickListener(ImagesActivity.this);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        uid = user.getUid();
+
         mStorage = FirebaseStorage.getInstance();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("upload").child(uid);
 
         mDBListener = mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -72,8 +72,8 @@ public class UploadActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
 
-        mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
+        mStorageRef = FirebaseStorage.getInstance().getReference("upload");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("upload").child(uid);
 
         mButtonChooseImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +85,10 @@ public class UploadActivity extends AppCompatActivity {
         mButtonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mUploadTask != null && mUploadTask.isInProgress()) {
+                if (mEditTextFileName.getText().length() == 0){
+                    Toast.makeText(UploadActivity.this, getString(R.string.insert_image_name), Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (mUploadTask != null && mUploadTask.isInProgress()) {
                     Toast.makeText(UploadActivity.this, "Upload in progress", Toast.LENGTH_SHORT).show();
                 } else {
                     uploadFile();
