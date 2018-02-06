@@ -1,17 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+
     android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:background="@android:color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -19,6 +19,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:paddingBottom="20dp"
                 android:paddingLeft="10dp"
@@ -35,19 +37,77 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/lowerBlock"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
-                <android.support.v7.widget.RecyclerView
-                    android:padding="8dp"
-                    android:id="@+id/recyclerView"
-                    android:layout_below="@id/custom_actionbar_with_components"
+
+                <Button
+                    android:id="@+id/BTHealth"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/Health" />
+
+                <Button
+                    android:id="@+id/BTSports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Sports" />
+
+                <Button
+                    android:id="@+id/BTFilms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Films" />
+
+                <Button
+                    android:id="@+id/BTFinance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Finance" />
+
+                <Button
+                    android:id="@+id/BTPolitics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Politics" />
+
+                <Button
+                    android:id="@+id/BTWeather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Weather" />
+
+                <Button
+                    android:id="@+id/BTLifestyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Lifestyle" />
+
+                <Button
+                    android:id="@+id/BTTheatre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Theatre" />
+
+                <Button
+                    android:id="@+id/BTTravel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Travel" />
+
+                <Button
+                    android:id="@+id/BTAnimals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Animals" />
             </LinearLayout>
-         </LinearLayout>
+        </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>
