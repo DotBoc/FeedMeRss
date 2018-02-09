@@ -15,8 +15,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.feedmerss.lidlproduction.feedmerss.Adapter.FeedAdapter;
 import com.feedmerss.lidlproduction.feedmerss.Model.RSSObject;
@@ -126,12 +124,8 @@ public class Main extends AppCompatActivity {
                 gotoActivity(Settings_Basic_RSS_selection.class);
                 break;
 
-            case R.id.add_custom_rss:
-                gotoActivity(Settings_Add_RSS.class);
-                break;
-
-            case R.id.manage_custom_rss:
-                gotoActivity(Settings_Manage_Custom_RSS.class);
+            case R.id.Set_Default_RSS_Feed:
+                gotoActivity(Set_Default_RSS_Feed.class);
                 break;
 
             case R.id.upload:
@@ -147,7 +141,6 @@ public class Main extends AppCompatActivity {
 
     private void gotoActivity(Class nextClass){
         Intent intent = new Intent(Main.this ,nextClass);
-       // intent.putExtra("FIREBASE_URL", FIREBASE_URL);
         startActivity(intent);
 
     }

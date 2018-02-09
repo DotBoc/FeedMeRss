@@ -30,6 +30,8 @@
     <string name="Save">Save</string>
     <string name="Select_Basic_Rss_Feed">Select Basic Rss Feed</string>
     <string name="accept">Accept</string>
-    <string name="added_rss_link">Successfully added RSS link with name : </string>
+    <string name="added_rss_link">Successfully set default RSS link : </string>
+    <string name="insert_rss_link">Please insert RSS link</string>
     <string name="insert_image_name">Please insert Image name</string>
+    <string name="Set_Default_RSS_Feed">Set Default RSS Feed</string>
 </resources>

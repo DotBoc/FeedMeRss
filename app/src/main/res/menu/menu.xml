@@ -9,14 +9,8 @@
     </item>
 
     <item
-        android:id="@+id/add_custom_rss"
-        android:title="@string/add_custom_rss"
-        app:showAsAction = "never">
-    </item>
-
-    <item
-        android:id="@+id/manage_custom_rss"
-        android:title="@string/manage_custom_rss"
+        android:id="@+id/Set_Default_RSS_Feed"
+        android:title="@string/Set_Default_RSS_Feed"
         app:showAsAction = "never">
     </item>
 
