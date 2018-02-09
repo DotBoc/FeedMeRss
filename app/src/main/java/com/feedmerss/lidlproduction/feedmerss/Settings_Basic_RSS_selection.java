@@ -151,7 +151,7 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
 
             case R.id.CBWeather:
                 if (checked){
-                    AddRSS("Weather","https://www.huffingtonpost.com/section/health/feed");
+                    AddRSS("Weather","https://www.huffingtonpost.com/topic/weather/feed");
                 }
                 else{
                     RemoveRSS("Weather");

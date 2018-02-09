@@ -125,7 +125,7 @@ public class NavigationDrawer extends Fragment implements View.OnClickListener {
 
         } else if (i == R.id.BTWeather) {
 
-            Main.RSS_link="http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml";
+            Main.RSS_link="https://www.huffingtonpost.com/topic/weather/feed";
 
         } else if (i == R.id.BTLifestyle) {
 

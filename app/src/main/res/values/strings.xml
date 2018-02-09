@@ -34,4 +34,19 @@
     <string name="insert_rss_link">Please insert RSS link</string>
     <string name="insert_image_name">Please insert Image name</string>
     <string name="Set_Default_RSS_Feed">Set Default RSS Feed</string>
+    <string name="error_didnt_find">Didn\'t find a default RSS Feed used Health Feed</string>
+    <string name="error_db_set_feed">There was an error with the Database used Health Feed as Default</string>
+    <string-array name="Default_array">
+        <item>Health</item>
+        <item>Sports</item>
+        <item>Films</item>
+        <item>Finance</item>
+        <item>Politics</item>
+        <item>Weather</item>
+        <item>Lifestyle</item>
+        <item>Theatre</item>
+        <item>Travel</item>
+        <item>Animals</item>
+    </string-array>
+
 </resources>

@@ -15,25 +15,58 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.feedmerss.lidlproduction.feedmerss.Adapter.FeedAdapter;
 import com.feedmerss.lidlproduction.feedmerss.Model.RSSObject;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 
 public class Main extends AppCompatActivity {
+
+    private DatabaseReference mDatabaseReference;
+    private String uid;
 
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     RecyclerView recyclerView;
     private static String FIREBASE_URL = "https://feedmerss-4580c.firebaseio.com/";
     private final String RSS_to_Json_API = "https://api.rss2json.com/v1/api.json?rss_url=";
-    static String RSS_link="https://www.huffingtonpost.com/topic/animals/feed";
+    static String RSS_link = "https://www.huffingtonpost.com/section/health/feed";
     RSSObject rssObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("/users");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        uid = user.getUid();
+
+        mDatabaseReference.child(uid).child("CustomRSSFeed").child("DefaultRSSLink").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    RSS_link = dataSnapshot.getValue(String.class);
+                } else {
+                    Toast.makeText(Main.this , getString(R.string.error_didnt_find)  , Toast.LENGTH_LONG).show();
+                    RSS_link = "https://www.huffingtonpost.com/section/health/feed";
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(Main.this , getString(R.string.error_db_set_feed)  , Toast.LENGTH_LONG).show();
+                RSS_link = "https://www.huffingtonpost.com/section/health/feed";
+
+            }
+        });
 
         Toolbar toolbar = findViewById(R.id.custom_actionbar_with_components);
         setSupportActionBar(toolbar);
@@ -56,6 +89,8 @@ public class Main extends AppCompatActivity {
             }
         };
 
+
+
         mDrawerlayout.setDrawerListener(mActionBarDrawerToggle);
 
         mDrawerlayout.post(new Runnable() {
@@ -68,6 +103,8 @@ public class Main extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+
 
         loadRSS();
 
