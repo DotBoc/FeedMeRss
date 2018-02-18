@@ -37,6 +37,12 @@
     <string name="error_didnt_find">Didn\'t find a default RSS Feed used Health Feed</string>
     <string name="error_db_set_feed">There was an error with the Database used Health Feed as Default</string>
     <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="getlink">Copy Link</string>
+    <string name="selectaction">Select Action</string>
+    <string name="delete_successful">Delete Successful</string>
+    <string name="presslong">Long press for more options</string>
+    <string name="gotlink">Successfully copied Image Link</string>
     <string-array name="Default_array">
         <item>Health</item>
         <item>Sports</item>

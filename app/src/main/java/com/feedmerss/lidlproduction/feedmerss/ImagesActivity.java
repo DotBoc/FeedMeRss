@@ -1,5 +1,8 @@
 package com.feedmerss.lidlproduction.feedmerss;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -89,12 +92,18 @@ public class ImagesActivity extends AppCompatActivity implements ImageAdapter.On
 
     @Override
     public void onItemClick(int position) {
-        Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.presslong, Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onWhatEverClick(int position) {
-        Toast.makeText(this, "Whatever click at position: " + position, Toast.LENGTH_SHORT).show();
+    public void onGetLink(int position) {
+        String label = "Image Link";
+        Upload selectedItem = mUploads.get(position);
+        String imageUrl = selectedItem.getImageUrl();
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText(label,imageUrl);
+        clipboard.setPrimaryClip(clip);
+        Toast.makeText(this,R.string.gotlink, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -107,7 +116,7 @@ public class ImagesActivity extends AppCompatActivity implements ImageAdapter.On
             @Override
             public void onSuccess(Void aVoid) {
                 mDatabaseRef.child(selectedKey).removeValue();
-                Toast.makeText(ImagesActivity.this, "Item deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ImagesActivity.this, R.string.delete_successful, Toast.LENGTH_SHORT).show();
             }
         });
     }
