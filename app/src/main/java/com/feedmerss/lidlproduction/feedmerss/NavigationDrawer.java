@@ -2,6 +2,7 @@ package com.feedmerss.lidlproduction.feedmerss;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +83,7 @@ public class NavigationDrawer extends Fragment implements View.OnClickListener {
 
         BTTheatre = myInflatedView.findViewById(R.id.BTTheatre);
         BTTheatre.setOnClickListener(this);
-        setVisibility(BTTheatre,"Theatre");
+        setVisibility(BTTheatre,"Theater");
 
 
         BTTravel = myInflatedView.findViewById(R.id.BTTravel);
@@ -103,6 +104,7 @@ public class NavigationDrawer extends Fragment implements View.OnClickListener {
    @Override
     public void onClick(View v) {
         int i = v.getId();
+
         if (i == R.id.BTHealth) {
 
             Main.RSS_link="https://www.huffingtonpost.com/section/health/feed";

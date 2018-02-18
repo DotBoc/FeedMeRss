@@ -75,7 +75,7 @@ public class Settings_Basic_RSS_selection extends AppCompatActivity {
         CheckState(Lifestyle,"Lifestyle");
 
         Theatre = findViewById(R.id.CBTheatre);
-        CheckState(Theatre,"Theatre");
+        CheckState(Theatre,"Theater");
 
         Travel = findViewById(R.id.CBTravel);
         CheckState(Travel,"Travel");

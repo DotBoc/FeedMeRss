@@ -1,5 +1,6 @@
 package com.feedmerss.lidlproduction.feedmerss;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class Set_Default_RSS_Feed extends AppCompatActivity {
 
 
     private TextView AddFeed;
-    private Button Save;
+    private Button Back;
 
     private  String RSS_link = "https://www.huffingtonpost.com/section/health/feed";
 
@@ -51,11 +52,20 @@ public class Set_Default_RSS_Feed extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        Save = findViewById(R.id.BSave);
+        Back = findViewById(R.id.BTBack);
+        Back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                gotoActivity(Main.class);
+
+            }
+        });
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("/users");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
+
+        SetDefaultAsSelected(spinner);
 
         spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
 
@@ -106,9 +116,6 @@ public class Set_Default_RSS_Feed extends AppCompatActivity {
                 }
 
                 AddRSS(RSS_link);
-
-                Toast.makeText(parent.getContext(), "The selected RSS Feed is " +
-                        parent.getItemAtPosition(pos).toString(), Toast.LENGTH_LONG).show();
 
             }
 
@@ -205,6 +212,12 @@ public class Set_Default_RSS_Feed extends AppCompatActivity {
                 }
                 Log.e("case",String.valueOf(pos));
                 return pos;
+
+    }
+
+    private void gotoActivity(Class nextClass){
+        Intent intent = new Intent(Set_Default_RSS_Feed.this ,nextClass);
+        startActivity(intent);
 
     }
 }

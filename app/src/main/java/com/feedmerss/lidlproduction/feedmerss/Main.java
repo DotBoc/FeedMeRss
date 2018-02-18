@@ -73,6 +73,7 @@ public class Main extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mDrawerlayout= findViewById(R.id.drawer_layout);
+
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar, R.string.open, R.string.close) {
 
             @Override
@@ -81,17 +82,22 @@ public class Main extends AppCompatActivity {
                 Log.e("Msgopened",RSS_link);
             }
 
+
+
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
                 loadRSS();
                 Log.e("Msgclosed",RSS_link);
             }
+
+
         };
 
 
 
         mDrawerlayout.setDrawerListener(mActionBarDrawerToggle);
+
 
         mDrawerlayout.post(new Runnable() {
             @Override
@@ -109,6 +115,8 @@ public class Main extends AppCompatActivity {
         loadRSS();
 
     }
+
+
 
 
     void loadRSS() {
