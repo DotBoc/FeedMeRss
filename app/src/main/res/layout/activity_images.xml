@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.feedmerss.lidlproduction.feedmerss.UploadActivity">
 
+    <include
+        android:id="@+id/custom_actionbar"
+        layout="@layout/custom_actionbar"
+        android:visibility="visible"></include>
+
     <ProgressBar
         android:id="@+id/progress_circle"
         android:layout_width="wrap_content"
@@ -14,6 +19,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
+        android:layout_below="@id/custom_actionbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
