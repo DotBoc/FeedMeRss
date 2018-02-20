@@ -22,4 +22,27 @@
     <string name="Theater">Théâtre</string>
     <string name="Travel">Voyager</string>
     <string name="Animals">Animaux</string>
+    <string name="open">Ouvre</string>
+    <string name="close">Ferme</string>
+    <string name="health">Sante</string>
+    <string name="example">Example</string>
+    <string name="upload">Télécharger</string>
+    <string name="error">Erreur</string>
+    <string name="Theatre">Théâtre</string>
+    <string name="Save">Enregistrer</string>
+    <string name="Select_Basic_Rss_Feed">Sélectionnez le flux RSS de base</string>
+    <string name="accept">Acceptez</string>
+    <string name="added_rss_link">A défini avec succès le rss par défaut</string>
+    <string name="insert_rss_link">Veuillez insérer le lien RSS</string>
+    <string name="insert_image_name">Veuillez insérer le nom de l\'image</string>
+    <string name="Set_Default_RSS_Feed">Définir le flux RSS par défaut</string>
+    <string name="error_didnt_find">N\'a pas trouvé de flux RSS par défaut utilisé</string>
+    <string name="error_db_set_feed">Une erreur s\'est produite lors de l\'utilisation de la base de données Health Feed par défaut</string>
+    <string name="back">En arrière</string>
+    <string name="delete">Effacer</string>
+    <string name="getlink">Copier le lien</string>
+    <string name="selectaction">Sélectionnez l\'action</string>
+    <string name="delete_successful">Supprimer réussi</string>
+    <string name="presslong">Appuyez longuement pour plus d\'options</string>
+    <string name="gotlink">Copie réussie du lien d\'image</string>
 </resources>
