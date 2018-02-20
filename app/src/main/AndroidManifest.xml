@@ -26,9 +26,6 @@
             android:name=".Set_Default_RSS_Feed"
             android:parentActivityName=".Main" />
         <activity
-            android:name=".Settings_Manage_Custom_RSS"
-            android:parentActivityName=".Main" />
-        <activity
             android:name=".Help"
             android:parentActivityName=".Main" />
         <activity
