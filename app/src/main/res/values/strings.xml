@@ -43,6 +43,7 @@
     <string name="delete_successful">Delete Successful</string>
     <string name="presslong">Long press for more options</string>
     <string name="gotlink">Successfully copied Image Link</string>
+    <string name="HelpMessage">This is an app to check your favorite topics through RSS Feeds. Just select the Feeds you want, from a great variety of subjects, open the sidebar and select the topic. You can also set the default RSS Feed. Furthermore there is the option to upload images to your personal account and be able to share them by copying the image’s link by long pressing the image and share it with your friends.But do not forget this is an online app so all your settings will be binded to your account no matter the device you use. We would like to hear your feedback ,you can contact us at FeedMeRSS@gmail.com.</string>
     <string-array name="Default_array">
         <item>Health</item>
         <item>Sports</item>
